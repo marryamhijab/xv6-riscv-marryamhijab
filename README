@@ -46,3 +46,20 @@ You will need a RISC-V "newlib" tool chain from
 https://github.com/riscv/riscv-gnu-toolchain, and qemu compiled for
 riscv64-softmmu.  Once they are installed, and in your shell
 search path, you can run "make qemu".
+----------------------------------------------------------------------------------------
+xv6 Process Manager
+Extensions to xv6-riscv, MIT's teaching operating system, adding process monitoring and scheduling features.
+
+Author: Marryam Hijab Course: Operating System
+
+MODULES ADDED FOR EXTENSION:
+1. Process Monitoring: ps lists running processes with PID, state, memory and priority 
+2. Syscall Tracing: trace prints the system calls a program makes 
+3. System Information: sysinfo shows free memory and number of processes 
+4. Priority Scheduler: nice sets process priority so important processes get more CPU 
+5. Lazy Memory Manager: memory is allocated only when a program actually uses it
+6. Kernel Log: kernel events (process created, process exited, page fault) are saved in a buffer and can be read with dmesg
+7. Uptime: shows how long the system has been running
+8. Syscall Statistics: shows how many times each system call has been used
+9. Process Killer: terminates processes by name instead of PID
+10. CPU Usage: tracks CPU time used by each process and shows it in ps
